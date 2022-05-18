@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- My Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- BOOTSTRAP REQUIREMENTS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    
+    <!-- For proper rendering on different devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Big Moon Power</title>
+</head>
+<div id="wrapper">
+    <div class="d-flex bg-dark text-white">
+        <body>
+        <!-- flex column that holds navbar and vizzes -->
+        <div class="flex-column flex-grow-1">
+           <div id = "nav-placeholder"></div>
+
+            <div class="container-fluid">
+                <div class="row">
+<!--                    <div class="col-sm-1">-->
+<!--                        &lt;!&ndash; Initialize a select button &ndash;&gt;-->
+<!--&lt;!&ndash;                        <select id="selectButton"></select>&ndash;&gt;-->
+<!--                    </div>-->
+                    <div class="col-sm-11" style="padding-left: 0;padding-right: 0">
+                        <!-- Div for line chart -->
+                        <div id="line_chart_dynamic"></div>
+                    </div>
+                </div> <!-- row -->
+
+            </div>
+
+        </div> <!-- flex column -->
+
+        <!-- Load d3.js -->
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <!-- Custom JS for charts -->
+        <script src="js/line_chart.js"></script>
+        <!-- Color Scale -->
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+        <!-- Menu Toggle Script -->
+        <script>
+            $.get("nav.html", function(data){
+                $("#nav-placeholder").replaceWith(data);
+            });
+        </script>
+        </body>
+    </div> <!-- container -->
+</div> <!-- wrapper -->
+</html>
