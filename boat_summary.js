@@ -1,4 +1,6 @@
-﻿var margin_main = {top: 50, right: 200, bottom: 50, left: 3},
+// https://github.com/jonathangiguere/Robinhood_Investment_Web_App
+
+var margin_main = {top: 50, right: 200, bottom: 50, left: 3},
     width_main = 900 - margin_main.left,
     height_main = 400 - margin_main.top - margin_main.bottom;
 
